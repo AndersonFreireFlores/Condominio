@@ -28,6 +28,14 @@ public class CondominioService {
         return condominioRepository.save(condominio);
     }
 
+    public Condominio update(int id, Condominio condominio) {
+    Condominio condominioToUpdate = findById(id);
+    condominioToUpdate.setNome(condominio.getNome());
+    condominioToUpdate.setCidade(condominio.getCidade());
+    condominioToUpdate.setBairro(condominio.getBairro());
+    condominioToUpdate.setEdificios(condominio.getEdificios());
+    return condominioRepository.save(condominioToUpdate);
+}
     public void deleteById(Integer id) {
         condominioRepository.deleteById(id);
     }

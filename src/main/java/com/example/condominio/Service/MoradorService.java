@@ -31,4 +31,15 @@ public class MoradorService {
     public void deleteById(int id) {
         moradorRepository.deleteById(id);
     }
+
+    public Morador update(int id, Morador morador) {
+        Morador moradorToUpdate = findById(id);
+        moradorToUpdate.setNome(morador.getNome());
+        moradorToUpdate.setCpf(morador.getCpf());
+        moradorToUpdate.setApartamento(morador.getApartamento());
+        moradorToUpdate.setIdade(morador.getIdade());
+        moradorToUpdate.setSexo(morador.getSexo());
+        moradorToUpdate.setRg(morador.getRg());
+        return moradorRepository.save(moradorToUpdate);
+    }
 }

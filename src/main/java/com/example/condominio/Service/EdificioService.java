@@ -28,6 +28,14 @@ public class EdificioService {
         return edificioRepository.save(edificio);
     }
 
+    public Edificio update(int id, Edificio edificio) {
+    Edificio edificioToUpdate = findById(id);
+    edificioToUpdate.setCor(edificio.getCor());
+    edificioToUpdate.setAndares(edificio.getAndares());
+    edificioToUpdate.setCondominio(edificio.getCondominio());
+    return edificioRepository.save(edificioToUpdate);
+}
+
     public void deleteById(int id) {
         edificioRepository.deleteById(id);
     }

@@ -28,6 +28,15 @@ public class ApartamentoService {
         return apartamentoRepository.save(apartamento);
     }
 
+    public Apartamento update(int id, Apartamento apartamento) {
+    Apartamento apartamentoToUpdate = findById(id);
+    apartamentoToUpdate.setAndar(apartamento.getAndar());
+    apartamentoToUpdate.setEdificio(apartamento.getEdificio());
+    apartamentoToUpdate.setMorador(apartamento.getMorador());
+    apartamentoToUpdate.setRendaMediaMoradores(apartamento.getRendaMediaMoradores());
+    return apartamentoRepository.save(apartamentoToUpdate);
+}
+
     public void deleteById(int id) {
         apartamentoRepository.deleteById(id);
     }
