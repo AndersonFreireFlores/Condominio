@@ -2,12 +2,11 @@ package com.example.condominio.Controllers;
 
 import com.example.condominio.Entities.Edificio;
 import com.example.condominio.Service.EdificioService;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class EdificioController {
 
     private final EdificioService edificioService;

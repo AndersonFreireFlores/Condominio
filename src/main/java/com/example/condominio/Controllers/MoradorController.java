@@ -2,12 +2,12 @@ package com.example.condominio.Controllers;
 
 import com.example.condominio.Entities.Morador;
 import com.example.condominio.Service.MoradorService;
-import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class MoradorController {
 
     private final MoradorService moradorService;
