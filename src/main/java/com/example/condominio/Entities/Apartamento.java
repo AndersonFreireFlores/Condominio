@@ -1,13 +1,11 @@
 package com.example.condominio.Entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.util.List;
 
 @Entity
+@Table(name = "apartamento")
 public class Apartamento {
 
     @Id
